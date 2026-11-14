@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Caduceus: LineageOS 24.0 (Android 17) with the repos below replaced or added.
+     default.xml and snippets/lineage.xml stay as LineageOS has them, so a Lineage
+     update merges cleanly. Every fork is listed here, and only here.
+-->
+<manifest>
+
+  <!-- Caduceus forks of LineageOS repos (github.com/caduceus-android, branch shunya) -->
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="caduceus-android/android_frameworks_base" revision="refs/heads/shunya" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="caduceus-android/android_packages_apps_Settings" revision="refs/heads/shunya" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+
+  <remove-project name="LineageOS/android_packages_modules_Bluetooth" />
+  <project path="packages/modules/Bluetooth" name="caduceus-android/android_packages_modules_Bluetooth" revision="refs/heads/shunya" groups="pdk" />
+
+  <remove-project name="LineageOS/android_vendor_lineage" />
+  <project path="vendor/lineage" name="caduceus-android/android_vendor_lineage" revision="refs/heads/shunya" />
+
+  <!-- Caduceus own repos -->
+  <project path="vendor/caduceus" name="caduceus-android/android_vendor_caduceus" revision="refs/heads/shunya" />
+
+  <!-- onyx (POCO F7 / Redmi Turbo 4 Pro), branch shunya -->
+  <project path="device/xiaomi/onyx" name="fakhrads/android_device_xiaomi_onyx" revision="refs/heads/shunya" />
+  <project path="device/xiaomi/onyx-miuicamera" name="fakhrads/android_device_xiaomi_onyx-miuicamera" revision="refs/heads/shunya" />
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" />
+  <project path="kernel/xiaomi/sm8735" name="fakhrads/android_kernel_xiaomi_sm8735" revision="refs/heads/shunya" />
+  <project path="kernel/xiaomi/sm8735-modules" name="fakhrads/android_kernel_xiaomi_sm8735-modules" revision="refs/heads/shunya" />
+  <project path="kernel/xiaomi/sm8735-devicetrees" name="fakhrads/android_kernel_xiaomi_sm8735-devicetrees" revision="refs/heads/shunya" />
+  <project path="vendor/xiaomi/onyx" name="fakhrads/proprietary_vendor_xiaomi_onyx" revision="refs/heads/shunya" />
+  <project path="vendor/xiaomi/onyx-leicacamera" name="fakhrads/proprietary_vendor_xiaomi_onyx-leicacamera" revision="refs/heads/shunya" />
+  <project path="vendor/xiaomi/onyx-miuicamera" name="fakhrads/proprietary_vendor_xiaomi_onyx-miuicamera" revision="refs/heads/shunya" />
+
+  <!-- onyx audio: QTI PAL and primary HAL forks of the LineageOS caf-sm8750 repos -->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_arpal-lx" path="hardware/qcom-caf/sm8750/audio/pal" />
+  <project path="hardware/qcom-caf/sm8750/audio/pal" name="fakhrads/android_vendor_qcom_opensource_arpal-lx" revision="refs/heads/shunya" groups="qcom,pakala-audio" />
+  <remove-project name="LineageOS/android_hardware_qcom_audio-ar" path="hardware/qcom-caf/sm8750/audio/primary-hal" />
+  <project path="hardware/qcom-caf/sm8750/audio/primary-hal" name="fakhrads/android_hardware_qcom_audio-ar" revision="refs/heads/shunya" groups="qcom,pakala-audio" />
+
+  <!-- Apps -->
+  <remove-project name="LineageOS/android_packages_apps_Launcher3" />
+  <project path="packages/apps/Launcher3" name="fakhrads/android_packages_apps_Launcher3" revision="refs/heads/shunya" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
+  <project path="packages/apps/ZeroEngine" name="fakhrads/android_packages_apps_ZeroEngine" revision="refs/heads/shunya" />
+  <project path="packages/apps/BypassCharging" name="fakhrads/android_packages_apps_BypassCharging" revision="refs/heads/shunya" />
+  <project path="packages/apps/LunarisDolby" name="fakhrads/android_packages_apps_LunarisDolby" revision="refs/heads/shunya" />
+
+</manifest>
