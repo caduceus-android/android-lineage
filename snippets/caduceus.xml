@@ -21,6 +21,10 @@
 
   <!-- Caduceus own repos -->
   <project path="vendor/caduceus" name="caduceus-android/android_vendor_caduceus" revision="refs/heads/shunya" />
+  <project path="packages/apps/AppLocker" name="caduceus-android/android_packages_apps_AppLocker" revision="refs/heads/shunya" />
+  <project path="packages/apps/Sandbox" name="caduceus-android/android_packages_apps_Sandbox" revision="refs/heads/shunya" />
+  <project path="packages/resources/apps" name="caduceus-android/android_packages_resources_apps" revision="refs/heads/shunya" />
+  <project path="packages/services/OmniJaws" name="caduceus-android/android_packages_services_OmniJaws" revision="refs/heads/shunya" />
 
   <!-- onyx (POCO F7 / Redmi Turbo 4 Pro), branch shunya -->
   <project path="device/xiaomi/onyx" name="fakhrads/android_device_xiaomi_onyx" revision="refs/heads/shunya" />
